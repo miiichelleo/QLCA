@@ -12,21 +12,18 @@
             left: 0;
             width: 100%;
             z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+		    }
 
     .header {
 			display:flex;
 			font-size: 0.5rem;
 			padding: 1rem;
-			color:black
-    }
+		    }
 
 	.menu {
 			text-decoration: none;
 			color: white;
 			background: black;
-			padding: 0.4rem 3rem;
 			border: 1px solid rgba(0, 0, 0, 0.15);
 			transition: 0.3s ease;
 }
@@ -52,22 +49,29 @@
  	}
 
 		.intro_hed{
-    		display: flex;
+			display: flex;
+			width: 45.25rem;
+			height: 15.875rem;
 			flex-direction: column;
 			justify-content: center;
 			color: #000;
-			font-size: 3rem;
-			font-weight: bold;
+			font-size: 5rem;
+			font-style: normal;
+			font-weight: 600;
+			line-height: normal;
 		}
 		.intro_cap{
 			display: flex;
+			width: 26.625rem;
+			height: 3.625rem;
 			flex-direction: column;
 			justify-content: center;
 			color: #000;
-			font-size: 1rem;
+			font-size: 1.5rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: normal;
 			text-transform: capitalize;
-			padding-bottom: 4rem;
-
 		}
 
 		.intro_nav{
@@ -78,11 +82,17 @@
 			justify-content: center;
 			color: #000;
 			text-align: center;
-			font-size: 0.7rem;
+			font-size: 1.5rem;
 			font-style: normal;
 			font-weight: 200;
 			line-height: normal;
 		}
+
+		.arrow {
+		animation: float 1.4s infinite ease-in-out;
+		display: inline-block;
+		font-weight: 400;
+}
 		#horiz-scrolly {
  		height:500vh;
     	position:relative;	
