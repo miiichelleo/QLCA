@@ -6,20 +6,22 @@
 <title>QLCA</title>
 
 <style>
-        .header {
+	.header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 100;
-
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .menu {
-         text-decoration: none;
+		font-size: 0.8rem;
+        padding: 1rem;
+		color:black
+
 
     }
         body {
@@ -28,288 +30,305 @@
             color: black;
     }
         #intro {
-            position:relative;
             background: linear-gradient(180deg, #EDEBEB 0%, #F5F5F5 50.48%);
-            margin: auto;
-            padding-top: 1rem;
-            padding-bottom: 2rem;
-            
-    
-        }
-        .square {
-
-            height: 20rem;
-            width: 20rem;
-            outline: dashed black 1px;
-            
-
-        }
-		#horiz-scrolly {
-			position: relative;
-			background-color: #f3f3f3;
-			padding: 1rem;
-		}
-
-		#horiz-scrolly article {
-			position: relative;
-			padding: 0;
-			max-width: 20rem;
-			margin: 0 auto;
-		}
-
-		#horiz-scrolly figure {
-			position: -webkit-sticky;
-			position: sticky;
-			left: 0;
-			width: 100%;
-			margin: 0;
-			-webkit-transform: translate3d(0, 0, 0);
-			-moz-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
-			background-color: #8a8a8a;
-			z-index: 0;
-		}
-
-		#horiz-scrolly figure p {
-			text-align: center;
-			padding: 1rem;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-moz-transform: translate(-50%, -50%);
-			-webkit-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-size: 8rem;
-			font-weight: 900;
-			color: #fff;
-		}
-
-		#horiz-scrolly .step {
-			margin: 0 auto 2rem auto;
-			color: #fff;
-			background-color: rgba(0, 0, 0, 0.1);
-		}
-
-		#horiz-scrolly .step:last-child {
-			margin-bottom: 0;
-		}
-
-		#horiz-scrolly .step.is-active p {
-			background-color: goldenrod;
-			color: #3b3b3b;
-		}
-
-		#horiz-scrolly .step p {
-			text-align: center;
-			padding: 1rem;
-			font-size: 1.5rem;
-			background-color: #3b3b3b;
-		}
-
-
-        		#vertic-scrolly {
-			position: relative;
-			display: -webkit-box;
-			display: -ms-flexbox;
+            position: relative;
+			height: 100vh;
 			display: flex;
-			background-color: #f3f3f3;
-			padding: 1rem;
+			flex-direction: column;
+			justify-content: center;
+			padding: 2rem;
+            
+ 	}
+
+		.intro__hed{
+    		font-size: 3rem;
 		}
 
-		#vertic-scrolly>* {
-			-webkit-box-flex: 1;
-			-ms-flex: 1;
-			flex: 1;
+		#horiz-scrolly {
+ 		height:500vh;
+    	position:relative;	
 		}
+
+		.sticky{
+		position:sticky;
+		top:0;
+		height:100vh;
+		overflow:hidden;
+		}
+
+		.model{
+		display:flex;
+		width:500vw;
+		height:100%;
+		transform:translateX(0);
+		transition:transform 0.2s linear;
+		}
+
+		.panel{
+		width:100vw;
+		height:100vh;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		font-size:4rem;
+		color:black;
+		outline: 1px solid rgba(0, 0, 0, 0.1);
+
+		}
+
+
+		.step {
+		height: 100vh;
+		}
+		
+        #vertic-scrolly {
+		position: relative;
+		display: flex;
+		background: white;
+	}
+
 
 		#vertic-scrolly article {
-			position: relative;
-			padding: 0 1rem;
-			max-width: 20rem;
+		width: 30%;
+		outline: 1px solid rgba(0, 0, 0, 0.1);
+		background: linear-gradient(180deg, #EDEBEB 0%, #F5F5F5 50.48%);
+		font-size: 1rem;
+
+            
 		}
 
 		#vertic-scrolly figure {
-			position: -webkit-sticky;
-			position: sticky;
-			width: 100%;
-			margin: 0;
-			-webkit-transform: translate3d(0, 0, 0);
-			-moz-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
-			background-color: #8a8a8a;
-			z-index: 0;
-		}
-
-		#vertic-scrolly figure p {
-			text-align: center;
-			padding: 1rem;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-moz-transform: translate(-50%, -50%);
-			-webkit-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-size: 8rem;
-			font-weight: 900;
-			color: #fff;
+		position: sticky;
+		top: 15vh;
+		height: 80vh;
+		width: 60vh;
+		background: linear-gradient(180deg, #EDEBEB 0%, #F5F5F5 50.48%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		font-size: 1rem;
 		}
 
 		#vertic-scrolly .step {
-			margin: 0 auto 2rem auto;
-			background-color: #3b3b3b;
-			color: #fff;
+		margin: 1rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		color: white;
+		outline: 1px solid rgba(0, 0, 0, 0.1);
+		text-align: center;
 		}
 
-		#vertic-scrolly .step:last-child {
-			margin-bottom: 0;
+		.square {
+		width: 200px;
+		height: 200px;
+		background: white;
+		transition: all 0.3s ease;
 		}
 
-		#vertic-scrolly .step.is-active {
-			background-color: goldenrod;
-			color: #3b3b3b;
+		#vertic-scrolly .step {
+		color: black;
+		margin-bottom:20rem
 		}
 
-		#vertic-scrolly .step p {
-			text-align: center;
-			padding: 1rem;
-			font-size: 1.5rem;
+		.model-view {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		width: 100%;
+		height: 100%;
+        background: white;
+        color: black;
+		align-items: center;
+		justify-content: center;
+        font-size: 1.2rem;
+		opacity: 0;
+		transition: opacity 0.35s ease;
+		pointer-events: none;
+     	}
+
+		.model-view.active {
+			opacity: 1;
 		}
+
+		.model-view img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+
+		#outro {
+    		height: 100vh;
+}
 	</style>
+
+
+<body>
 
 <!--Header-->
 
-<header class="header">
-<div class="menu">Chapters</div>
-</header>
+    <header class="header">
+        <div class="menu">Chapters</div>
+    </header>
 
-<!--Section 1: Homepage-->
+ <!--Section 0: Homepage-->
 
-<body>
 	<main>
 		<section id="intro">
-			<h1 class="intro__hed">SUSTAINABLE<br>URBAN<br>PLANNING</h1>
+			<h1 class="intro__hed">
+				SUSTAINABLE<br>URBAN<br>PLANNING
+			</h1>
 			<p class="intro__dek">
-				A modular approach to<br>Urban Life Cycle Assessments
+				A modular approach to Urban Life Cycle Assessments
 			</p>
             <p class="intro__nav">
 				SCROLL ↓
 			</p>
-            <div class="square"></div>
 		</section>
 
-        
-<!--Section 2: Intro-->
-		<section id="horiz-scrolly">
-			<figure style="height: 380.5px; top: 190.25px;">
-				<p>1</p>
-			</figure>
 
-			<article>
-				<div class="step is-active" data-step="1" style="height: 570px;" data-scrollama-index="0">
-					<p>STEP 1</p>
+<!--Section 1: Intro-->
+
+		<section id="horiz-scrolly">
+
+			<div class="sticky">
+				<div class="model" id="model">
+					<section class="panel one">1</section>
+					<section class="panel two">2</section>
+					<section class="panel three">3</section>
+					<section class="panel four">4</section>
+					<section class="panel five">5</section>
 				</div>
-				<div class="step" data-step="2" style="height: 570px;" data-scrollama-index="1">
-					<p>STEP 2</p>
-				</div>
-				<div class="step" data-step="3" style="height: 570px;" data-scrollama-index="2">
-					<p>STEP 3</p>
-				</div>
-				<div class="step" data-step="4" style="height: 570px;" data-scrollama-index="3">
-					<p>STEP 4</p>
-				</div>
-			</article>
+			</div>
+
+
+			<div class="step"></div>
+			<div class="step"></div>
+			<div class="step"></div>
+			<div class="step"></div>
+			<div class="step"></div>
+
 		</section>
 
 
 <!--Section 2: Concept-->
-		<section id="vertic-scrolly">
-			<article>
-				<div class="step is-active" data-step="1" style="height: 570px;" data-scrollama-index="0">
-					<p>STEP 1</p>
-				</div>
-				<div class="step" data-step="2" style="height: 570px;" data-scrollama-index="1">
-					<p>STEP 2</p>
-				</div>
-				<div class="step" data-step="3" style="height: 570px;" data-scrollama-index="2">
-					<p>STEP 3</p>
-				</div>
-				<div class="step" data-step="4" style="height: 570px;" data-scrollama-index="3">
-					<p>STEP 4</p>
-				</div>
-			</article>
 
-			<figure style="height: 380.5px; top: 190.25px;">
-				<p>1</p>
-			</figure>
-		</section>
+	<section id="vertic-scrolly">
+
+		<article>
+			<div class="step">This is a test text to test how wide the box will get an if the set boundaries fits the storytelling layout.</div>
+			<div class="step">2</div>
+			<div class="step">3</div>
+			<div class="step">4</div>
+		</article>
+
+		<figure> 
+            <!--Model O as a starting page (?)-->
+            <div class="model-view active" id="model-0">
+            </div>
+            <div class="model-view" id="model-1">
+            <img src="Model1.png" alt="Model 1">
+            </div>
+            <div class="model-view" id="model-2">
+                <img src="Model2.png" alt="Model 2">
+            </div>
+            <div class="model-view" id="model-3">Model 3</div>
+        </figure>
+
+	</section>
+	<section id="outro"></section>
 
 	</main>
 
-	<!-- <div class='debug'></div> -->
-	<script src="./Scrollama_ Sticky Side Example_files/d3.min.js"></script>
-	<script src="./Scrollama_ Sticky Side Example_files/scrollama.min.js"></script>
+	<script src="./scrollama/d3.v7.min.js"></script>
+	<script src="./scrollama/scrollama.js"></script>
 	<script>
-		// using d3 for convenience
-		var main = d3.select("main");
-		var scrolly = main.select("#scrolly");
-		var figure = scrolly.select("figure");
-		var article = scrolly.select("article");
-		var step = article.selectAll(".step");
-
-		// initialize the scrollama
-		var scroller = scrollama();
-
-		// generic window resize listener event
-		function handleResize() {
-			// 1. update height of step elements
-			var stepH = Math.floor(window.innerHeight * 0.75);
-			step.style("height", stepH + "px");
-
-			var figureHeight = window.innerHeight / 2;
-			var figureMarginTop = (window.innerHeight - figureHeight) / 2;
-
-			figure
-				.style("height", figureHeight + "px")
-				.style("top", figureMarginTop + "px");
-
-			// 3. tell scrollama to update new element dimensions
-			scroller.resize();
-		}
-
-		// scrollama event handlers
-		function handleStepEnter(response) {
-			console.log(response);
-			// response = { element, direction, index }
-
-			// add color to current step only
-			step.classed("is-active", function (d, i) {
-				return i === response.index;
-			});
-
-			// update graphic based on step
-			figure.select("p").text(response.index + 1);
-		}
-
-		function init() {
-
-			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
-			handleResize();
-
-			// 2. setup the scroller passing options
-			// 		this will also initialize trigger observations
-			// 3. bind scrollama event handlers (this can be chained like below)
-			scroller
-				.setup({
-					step: "#scrolly article .step",
-					offset: 0.33,
-					debug: false
-				})
-				.onStepEnter(handleStepEnter);
-		}
-
-		// kick things off
-		init();
-	</script>
 
 
-</body></html>
+	const scroller = scrollama();
+	const square = document.getElementById("stepSquare");
+
+	const models = [
+        document.getElementById("model-0"),
+        document.getElementById("model-1"),
+        document.getElementById("model-2"),
+        document.getElementById("model-3")
+];
+
+
+	const horizSteps = d3.selectAll("#horiz-scrolly .step");
+	const vertScrolly = d3.select("#vertic-scrolly");
+	const vertSteps = vertScrolly.selectAll(".step");
+	const vertFigure = vertScrolly.select("figure");
+
+	function handleResize() {
+
+		const stepHeight = Math.floor(window.innerHeight * 0.75);
+
+		horizSteps.style("height", stepHeight + "px");
+		vertSteps.style("height", stepHeight + "px");
+
+		scroller.resize();
+	}
+
+//Horizontal scrolling
+
+function handleHorizontal(response) {
+
+	// Move panels (5 panels = 400vw max shift)
+	model.style.transform =
+		`translateX(-${response.index * 100}vw)`;
+}
+
+//Vertical scrolling
+
+function handleVertical(response) {
+
+	const verticalIndex = Math.max(0, vertSteps.nodes().indexOf(response.element));
+
+    vertSteps.classed("is-active", (d, i) =>
+	i === verticalIndex
+    );
+
+	const modelIndex = Math.min(verticalIndex + 1, models.length - 1);
+
+    models.forEach(m => m.classList.remove("active"));
+
+	const activeModel = models[modelIndex] || models[0];
+	activeModel.classList.add("active");
+ }
+
+	
+function handleStepEnter(response) {
+
+	const section = response.element.closest("section").id;
+
+	if (section === "horiz-scrolly") {
+		handleHorizontal(response);
+	}
+
+	if (section === "vertic-scrolly") {
+		handleVertical(response);
+	}
+}
+
+function init() {
+   	handleResize();
+
+	scroller.setup({
+
+		step: ".step",
+		offset: 0.5,
+		debug: false
+
+	}).onStepEnter(handleStepEnter);
+}
+
+init();
+
+window.addEventListener("resize", handleResize);
+
+</script>
+
+</body>
+</html>
