@@ -12,18 +12,29 @@
             left: 0;
             width: 100%;
             z-index: 100;
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .menu {
-		font-size: 0.8rem;
-        padding: 1rem;
-		color:black
-
-
+    .header {
+			display:flex;
+			font-size: 0.5rem;
+			padding: 1rem;
+			color:black
     }
+
+	.menu {
+			text-decoration: none;
+			color: white;
+			background: black;
+			padding: 0.4rem 3rem;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			transition: 0.3s ease;
+}
+
+	.menu:hover {
+			background: rgba(255,255,255,0.12);
+			transform: translateY(-2px);
+}
         body {
             font-family: "inter", sans-serif;
             background: linear-gradient(180deg, #EDEBEB 0%, #F5F5F5 50.48%);
@@ -40,10 +51,38 @@
             
  	}
 
-		.intro__hed{
-    		font-size: 3rem;
+		.intro_hed{
+    		display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #000;
+			font-size: 3rem;
+			font-weight: bold;
+		}
+		.intro_cap{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #000;
+			font-size: 1rem;
+			text-transform: capitalize;
+			padding-bottom: 4rem;
+
 		}
 
+		.intro_nav{
+			display: flex;
+			width: 15.1875rem;
+			height: 1.625rem;
+			flex-direction: column;
+			justify-content: center;
+			color: #000;
+			text-align: center;
+			font-size: 0.7rem;
+			font-style: normal;
+			font-weight: 200;
+			line-height: normal;
+		}
 		#horiz-scrolly {
  		height:500vh;
     	position:relative;	
@@ -73,7 +112,6 @@
 		font-size:4rem;
 		color:black;
 		outline: 1px solid rgba(0, 0, 0, 0.1);
-
 		}
 
 
@@ -85,7 +123,7 @@
 		position: relative;
 		display: flex;
 		background: white;
-	}
+		}
 
 
 		#vertic-scrolly article {
@@ -101,13 +139,14 @@
 		position: sticky;
 		top: 15vh;
 		height: 80vh;
-		width: 60vh;
+		width: 80vh;
 		background: linear-gradient(180deg, #EDEBEB 0%, #F5F5F5 50.48%);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		color: white;
 		font-size: 1rem;
+		margin-left: 10rem;
 		}
 
 		#vertic-scrolly .step {
@@ -175,13 +214,13 @@
 
 	<main>
 		<section id="intro">
-			<h1 class="intro__hed">
+			<h1 class="intro_hed">
 				SUSTAINABLE<br>URBAN<br>PLANNING
 			</h1>
-			<p class="intro__dek">
-				A modular approach to Urban Life Cycle Assessments
+			<p class="intro_cap">
+				A modular approach to<br>Urban Life Cycle Assessments
 			</p>
-            <p class="intro__nav">
+            <p class="intro_nav">
 				SCROLL ↓
 			</p>
 		</section>
@@ -227,10 +266,10 @@
             <div class="model-view active" id="model-0">
             </div>
             <div class="model-view" id="model-1">
-            <img src="Model1.png" alt="Model 1">
+            <img src="./Models(test)/Model1.png" alt="Model 1">
             </div>
             <div class="model-view" id="model-2">
-                <img src="Model2.png" alt="Model 2">
+                <img src="./Models(test)/Model2.png" alt="Model 2">
             </div>
             <div class="model-view" id="model-3">Model 3</div>
         </figure>
